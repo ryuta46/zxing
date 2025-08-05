@@ -686,9 +686,9 @@
         <jdk>[,9)</jdk> <!-- Android won't necessarily work with JDK 9 -->
       </activation>
       <modules>
-        <module>android-core</module>
+        <!-- <module>android-core</module>
         <module>android-integration</module>
-        <module>android</module>
+        <module>android</module> -->
       </modules>
       <dependencyManagement>
         <dependencies>
