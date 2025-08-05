@@ -242,4 +242,10 @@ final class BitMatrixParser {
     }
   }
 
+  int getMaskIndex() {
+    if (parsedFormatInfo == null) {
+      return -1; // No format information, no mask pattern
+    }
+    return parsedFormatInfo.getDataMask();
+  }
 }

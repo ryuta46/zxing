@@ -34,6 +34,8 @@ public final class Result {
   private Map<ResultMetadataType,Object> resultMetadata;
   private final long timestamp;
 
+  private int maskIndex = -1;
+
   public Result(String text,
                 byte[] rawBytes,
                 ResultPoint[] resultPoints,
@@ -63,6 +65,7 @@ public final class Result {
     this.format = format;
     this.resultMetadata = null;
     this.timestamp = timestamp;
+    this.maskIndex = -1;
   }
 
   /**
@@ -150,4 +153,11 @@ public final class Result {
     return text;
   }
 
+  public int getMaskIndex() {
+    return maskIndex;
+  }
+
+  public void setMaskIndex(int maskIndex) {
+    this.maskIndex = maskIndex;
+  }
 }

@@ -159,6 +159,9 @@ public final class Decoder {
     // Decode the contents of that stream of bytes
     DecoderResult result = DecodedBitStreamParser.decode(resultBytes, version, ecLevel, hints);
     result.setErrorsCorrected(errorsCorrected);
+
+    result.setMaskIndex(parser.getMaskIndex());
+
     return result;
   }
 

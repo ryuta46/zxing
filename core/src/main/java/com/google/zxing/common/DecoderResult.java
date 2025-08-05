@@ -39,6 +39,8 @@ public final class DecoderResult {
   private final int structuredAppendSequenceNumber;
   private final int symbologyModifier;
 
+  private int maskIndex;
+
   public DecoderResult(byte[] rawBytes,
                        String text,
                        List<byte[]> byteSegments,
@@ -78,6 +80,7 @@ public final class DecoderResult {
     this.structuredAppendParity = saParity;
     this.structuredAppendSequenceNumber = saSequence;
     this.symbologyModifier = symbologyModifier;
+    this.maskIndex = -1;
   }
 
   /**
@@ -173,4 +176,11 @@ public final class DecoderResult {
     return symbologyModifier;
   }
 
+  public int getMaskIndex() {
+    return maskIndex;
+  }
+
+  public void setMaskIndex(int maskIndex) {
+    this.maskIndex = maskIndex;
+  }
 }
