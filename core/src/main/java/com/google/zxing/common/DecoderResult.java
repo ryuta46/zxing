@@ -40,6 +40,7 @@ public final class DecoderResult {
   private final int symbologyModifier;
 
   private int maskIndex;
+  private int qrVersion;
 
   public DecoderResult(byte[] rawBytes,
                        String text,
@@ -81,6 +82,7 @@ public final class DecoderResult {
     this.structuredAppendSequenceNumber = saSequence;
     this.symbologyModifier = symbologyModifier;
     this.maskIndex = -1;
+    this.qrVersion = -1;
   }
 
   /**
@@ -182,5 +184,13 @@ public final class DecoderResult {
 
   public void setMaskIndex(int maskIndex) {
     this.maskIndex = maskIndex;
+  }
+
+  public int getQRVersion() {
+    return qrVersion;
+  }
+
+  public void setQRVersion(int qrVersion) {
+    this.qrVersion = qrVersion;
   }
 }

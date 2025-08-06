@@ -35,6 +35,7 @@ public final class Result {
   private final long timestamp;
 
   private int maskIndex = -1;
+  private int qrVersion = -1;
 
   public Result(String text,
                 byte[] rawBytes,
@@ -66,6 +67,7 @@ public final class Result {
     this.resultMetadata = null;
     this.timestamp = timestamp;
     this.maskIndex = -1;
+    this.qrVersion = -1;
   }
 
   /**
@@ -159,5 +161,13 @@ public final class Result {
 
   public void setMaskIndex(int maskIndex) {
     this.maskIndex = maskIndex;
+  }
+
+  public int getQRVersion() {
+    return qrVersion;
+  }
+
+  public void setQRVersion(int qrVersion) {
+    this.qrVersion = qrVersion;
   }
 }

@@ -161,6 +161,7 @@ public final class Decoder {
     result.setErrorsCorrected(errorsCorrected);
 
     result.setMaskIndex(parser.getMaskIndex());
+    result.setQRVersion(parser.readVersion().getVersionNumber());
 
     return result;
   }

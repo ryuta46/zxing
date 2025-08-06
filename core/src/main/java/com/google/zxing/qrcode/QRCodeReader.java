@@ -103,6 +103,7 @@ public class QRCodeReader implements Reader {
     result.putMetadata(ResultMetadataType.SYMBOLOGY_IDENTIFIER, "]Q" + decoderResult.getSymbologyModifier());
 
     result.setMaskIndex(decoderResult.getMaskIndex());
+    result.setQRVersion(decoderResult.getQRVersion());
     return result;
   }
 
